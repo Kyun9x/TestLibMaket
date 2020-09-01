@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Example/pagination-recyclerview/PaginationRecyclerView" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-CRM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-GongChaV2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-KotlinSuperApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-Merchant" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-MiraiVip" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-PdaOrder" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-Sgoodie/yakimono" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-SmoothieFactoryV2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-TGFood" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-ViCash-V1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-ViCash-V2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Android-iPOSBilling" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/FoodBook/FoodBook" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/IPCC" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Iki" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Iki/android---iki" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/IposCRM" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/IposFactory" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/IposManager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/IposManagerNew" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/IposManagerNew/android-iposmanagernew" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/KioskSelfOrderiPOS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/Kitchen" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/PosMobileNewver" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/WindMill" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-basicproject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-fabiadmin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-quickorder" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-skyline" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-smartkitchen" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-smoothiefactory" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-soya" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-supplier" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/android-tocotoco" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/customerfacing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/ipos-supperapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/ipos-supperapp/android-kotlinsuperapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/lalaposandroid" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ipos/yutang" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OrtherBrand/Android-TGFood" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OrtherBrand/PdaHotFix" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OrtherBrand/android-kotlinsuperapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OrtherBrand/hotfix/Android-PdaOrder" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OrtherBrand/yakimono" vcs="Git" />
+  </component>
+</project>

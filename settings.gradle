@@ -1,0 +1,3 @@
+include ':MinhHaiLib'
+include ':app'
+rootProject.name = "LibUtill"
