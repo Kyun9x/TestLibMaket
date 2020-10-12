@@ -22,49 +22,49 @@ object ActivityExt {
             .commit()
     }
 
-    fun AppCompatActivity.openActivity(
-        clz: Class<*>, bundle: Bundle? = null, clearTop: Boolean = false,
-        enterAnim: Int? = null, exitAnim: Int? = null, flags: IntArray? = null
-    ) {
-        val intent = Intent(ctx, clz)
-        if (flags?.isNotEmpty() == true) {
-            for (flag in flags) {
-                intent.addFlags(flag)
-            }
-        }
-        if (clearTop) {
-            setResult(Activity.RESULT_CANCELED)
-            finishAffinity()
-        }
-        if (bundle != null) {
-            intent.putExtras(bundle)
-        }
-        startActivity(intent)
-        enterAnim?.also { enter ->
-            exitAnim?.also { exit ->
-                overridePendingTransition(enter, exit)
-            }
-        }
-    }
+//    fun AppCompatActivity.openActivity(
+//        clz: Class<*>, bundle: Bundle? = null, clearTop: Boolean = false,
+//        enterAnim: Int? = null, exitAnim: Int? = null, flags: IntArray? = null
+//    ) {
+//        val intent = Intent(ctx, clz)
+//        if (flags?.isNotEmpty() == true) {
+//            for (flag in flags) {
+//                intent.addFlags(flag)
+//            }
+//        }
+//        if (clearTop) {
+//            setResult(Activity.RESULT_CANCELED)
+//            finishAffinity()
+//        }
+//        if (bundle != null) {
+//            intent.putExtras(bundle)
+//        }
+//        startActivity(intent)
+//        enterAnim?.also { enter ->
+//            exitAnim?.also { exit ->
+//                overridePendingTransition(enter, exit)
+//            }
+//        }
+//    }
 
-    fun AppCompatActivity.openActivityForResult(
-        clz: Class<*>,
-        requestCode: Int,
-        bundle: Bundle? = null,
-        enterAnim: Int? = null,
-        exitAnim: Int? = null
-    ) {
-        val intent = Intent(ctx, clz)
-        if (bundle != null) {
-            intent.putExtras(bundle)
-        }
-        startActivityForResult(intent, requestCode)
-        enterAnim?.also { enter ->
-            exitAnim?.also { exit ->
-                overridePendingTransition(enter, exit)
-            }
-        }
-    }
+//    fun AppCompatActivity.openActivityForResult(
+//        clz: Class<*>,
+//        requestCode: Int,
+//        bundle: Bundle? = null,
+//        enterAnim: Int? = null,
+//        exitAnim: Int? = null
+//    ) {
+//        val intent = Intent(ctx, clz)
+//        if (bundle != null) {
+//            intent.putExtras(bundle)
+//        }
+//        startActivityForResult(intent, requestCode)
+//        enterAnim?.also { enter ->
+//            exitAnim?.also { exit ->
+//                overridePendingTransition(enter, exit)
+//            }
+//        }
+//    }
 
     fun AppCompatActivity.closeActivity(enterAnim: Int? = null, exitAnim: Int? = null) {
         finishAfterTransition()
