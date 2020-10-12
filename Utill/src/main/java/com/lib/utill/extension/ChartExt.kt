@@ -1,4 +1,4 @@
-package com.example.utill.extension
+package com.lib.utill.extension
 
 import android.graphics.Color
 import android.graphics.Color.rgb

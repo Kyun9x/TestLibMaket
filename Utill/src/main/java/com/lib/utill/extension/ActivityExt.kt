@@ -1,4 +1,4 @@
-package com.example.utill.extension
+package com.lib.utill.extension
 
 import android.app.Activity
 import android.content.Context
@@ -13,7 +13,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import com.example.utill.R
+import com.lib.utill.R
 
 fun AppCompatActivity.addFragment(containerId: Int, fragment: Fragment) {
     supportFragmentManager.beginTransaction().add(containerId, fragment, fragment.tag).commit()
@@ -118,7 +118,7 @@ fun AppCompatActivity.showStatusBar(
     color?.run {
         win.statusBarColor = resources.getColor(this)
     } ?: run {
-        win.statusBarColor = resources.getColor(R.color.black)
+//        win.statusBarColor = resources.getColor(R.color.black)
     }
 }
 
@@ -160,17 +160,17 @@ fun AppCompatActivity.hideAllKeyboard() {
     }
 }
 
-fun AppCompatActivity.networkIsConnected(): Boolean {
-    try {
-        val conMgr = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        if (!conMgr.activeNetworkInfo.isConnected) {
-            showToast(getString(R.string.check_connect))
-            return false
-        }
-    } catch (e: Exception) {
-        showToast(getString(R.string.check_connect))
-        e.printStackTrace()
-        return false
-    }
-    return true
-}
+//fun AppCompatActivity.networkIsConnected(): Boolean {
+//    try {
+//        val conMgr = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+//        if (!conMgr.activeNetworkInfo.isConnected) {
+//            showToast(getString(R.string.check_connect))
+//            return false
+//        }
+//    } catch (e: Exception) {
+//        showToast(getString(R.string.check_connect))
+//        e.printStackTrace()
+//        return false
+//    }
+//    return true
+//}

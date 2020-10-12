@@ -1,4 +1,4 @@
-package com.example.utill
+package com.lib.utill
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

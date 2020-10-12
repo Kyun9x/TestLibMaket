@@ -1,4 +1,4 @@
-package com.example.utill.extension
+package com.lib.utill.extension
 
 //fun Context.networkIsConnected():Boolean {
 //    try {

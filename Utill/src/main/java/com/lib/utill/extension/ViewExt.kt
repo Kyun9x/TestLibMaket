@@ -1,4 +1,4 @@
-package com.example.utill.extension
+package com.lib.utill.extension
 
 import android.content.Context
 import android.view.MotionEvent
@@ -17,7 +17,7 @@ val View.ctx: Context
 
 var TextView.textColor: Int
     get() = currentTextColor
-    set(value) = setTextColor(ContextCompat.getColor(com.example.utill.extension.extension.ctx, value))
+    set(value) = setTextColor(ContextCompat.getColor(com.lib.utill.extension.extension.ctx, value))
 
 
 fun View.slideExit() {
@@ -41,7 +41,7 @@ fun View.invisible() {
 }
 
 fun ViewGroup.setAnimation(visibility: Int, animation: Int) {
-    val anim = AnimationUtils.loadAnimation(com.example.utill.extension.extension.ctx, animation)
+    val anim = AnimationUtils.loadAnimation(com.lib.utill.extension.extension.ctx, animation)
     val animController = LayoutAnimationController(anim)
 
     this.visibility = visibility
@@ -58,7 +58,7 @@ fun View.showSnackbar(
     val strMsg = when (msg) {
         is CharSequence -> msg
         is String -> msg
-        is Int -> com.example.utill.extension.extension.ctx.getString(msg)
+        is Int -> com.lib.utill.extension.extension.ctx.getString(msg)
         else -> "Message format is not supported"
     }
     val snackBar = Snackbar.make(this, strMsg, length)
@@ -66,7 +66,7 @@ fun View.showSnackbar(
         val strAction = when (action) {
             is CharSequence -> action
             is String -> action
-            is Int -> com.example.utill.extension.extension.ctx.getString(action)
+            is Int -> com.lib.utill.extension.extension.ctx.getString(action)
             else -> ""
         }
 

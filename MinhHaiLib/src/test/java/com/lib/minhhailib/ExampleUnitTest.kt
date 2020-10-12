@@ -1,4 +1,4 @@
-package com.example.minhhailib
+package com.lib.minhhailib
 
 import org.junit.Test
 
