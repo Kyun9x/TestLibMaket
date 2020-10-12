@@ -1,4 +1,4 @@
-package com.lib.MarketPlace
+package com.lib.example
 
 import org.junit.Test
 
