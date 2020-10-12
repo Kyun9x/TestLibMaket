@@ -1,5 +1,5 @@
-include ':MarketPlace'
+//include ':MarketPlace'
 //include ':Utill'
-//include ':MinhHaiLib'
+include ':MinhHaiLib'
 include ':app'
 rootProject.name = "LibUtill"
