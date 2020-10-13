@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:background="?android:selectableItemBackground"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_width="@dimen/action_bar_height_40"
+        android:layout_height="@dimen/action_bar_height_40"
+        android:padding="@dimen/standard_margin_12"
+        android:src="@drawable/back" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanRegular
+        android:id="@+id/edit"
+        android:layout_toRightOf="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margin"
+        android:background="@drawable/border_color_f6"
+        android:padding="@dimen/standard_margin"
+        android:textSize="@dimen/font_size_16" />
+
+    <ImageView
+        android:id="@+id/myLocation"
+        android:layout_width="@dimen/action_bar_height"
+        android:layout_marginRight="10dp"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:clickable="true"/>
+
+    <com.lib.marketplace.customview.TextViewOpenSanRegular
+        android:id="@+id/btn_xacNhan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/standard_margin_double"
+        android:background="@drawable/border_time_day_select"
+        android:gravity="center"
+        android:padding="@dimen/standard_margin"
+        android:text="@string/btn_xacnhan"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_size_18" />
+
+</RelativeLayout>

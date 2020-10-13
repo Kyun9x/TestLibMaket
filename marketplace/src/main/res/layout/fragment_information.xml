@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/include_header2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include2"
+        android:layout_marginTop="-16dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_text"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingTop="@dimen/d_10"
+                android:paddingBottom="@dimen/d_10"
+                android:text="@string/place_apply"
+                android:textAllCaps="true"
+                android:textColor="@color/gray80"
+                android:textSize="@dimen/font_size_15" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPBrand"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_brand"
+                    android:drawableRight="@drawable/icon_down_black"
+                    android:drawablePadding="@dimen/d_10"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/brand"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPStore"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/store"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_branch"
+                    android:drawableRight="@drawable/icon_down_black"
+                    android:drawablePadding="@dimen/d_10"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/store"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:background="@color/bg_text"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingTop="@dimen/d_10"
+                android:paddingBottom="@dimen/d_10"
+                android:text="@string/receiving_information"
+                android:textAllCaps="true"
+                android:textColor="@color/gray80"
+                android:textSize="@dimen/font_size_15" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPInfoName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/info_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPPhoneNumber"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/info_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="@dimen/standard_margin"-->
+            <!--                android:layout_marginTop="@dimen/standard_margin"-->
+            <!--                android:layout_marginRight="@dimen/standard_margin"-->
+            <!--                android:hint="@string/adress">-->
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/adress"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:drawableRight="@drawable/down"-->
+            <!--                    android:drawablePadding="@dimen/standard_margin"-->
+            <!--                    android:focusable="false"-->
+            <!--                    android:padding="@dimen/standard_margin"-->
+            <!--                    android:text=" "-->
+            <!--                    android:textColor="@color/text_36"-->
+            <!--                    android:textSize="@dimen/font_size_15" />-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="@dimen/standard_margin"-->
+            <!--                android:layout_marginTop="@dimen/standard_margin"-->
+            <!--                android:layout_marginRight="@dimen/standard_margin"-->
+            <!--                android:hint="@string/province_city">-->
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/city"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:drawableRight="@drawable/down"-->
+            <!--                    android:drawablePadding="@dimen/standard_margin"-->
+            <!--                    android:focusable="false"-->
+            <!--                    android:padding="@dimen/standard_margin"-->
+            <!--                    android:text=" "-->
+            <!--                    android:textColor="@color/text_36"-->
+            <!--                    android:textSize="@dimen/font_size_15" />-->
+
+
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="@dimen/standard_margin"-->
+            <!--                android:layout_marginTop="@dimen/standard_margin"-->
+            <!--                android:layout_marginRight="@dimen/standard_margin"-->
+            <!--                android:hint="@string/district">-->
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/district"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:drawableRight="@drawable/down"-->
+            <!--                    android:drawablePadding="@dimen/standard_margin"-->
+            <!--                    android:focusable="false"-->
+            <!--                    android:padding="@dimen/standard_margin"-->
+            <!--                    android:text=" "-->
+            <!--                    android:textColor="@color/text_36"-->
+            <!--                    android:textSize="@dimen/font_size_15" />-->
+
+
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPNote"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_10"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/note"
+                    android:inputType="textCapSentences"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:background="@color/bg_text"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingTop="@dimen/d_10"
+                android:paddingBottom="@dimen/d_10"
+                android:text="@string/dia_chi_nhan_hang"
+                android:textAllCaps="true"
+                android:textColor="@color/gray80"
+                android:textSize="@dimen/font_size_15" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:id="@+id/mAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_5"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/d_5"
+                android:background="?selectableItemBackground"
+                android:gravity="start"
+                android:padding="@dimen/standard_margin"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_15"
+                android:visibility="gone" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:id="@+id/mAddAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:background="@drawable/view_button_change_address"
+                android:gravity="center"
+                android:paddingLeft="@dimen/d_10"
+                android:paddingTop="@dimen/d_5"
+                android:paddingRight="@dimen/d_10"
+                android:paddingBottom="@dimen/d_5"
+                android:text="@string/change_address"
+                android:textColor="@color/mainColor"
+                android:textSize="@dimen/font_size_13" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:background="@color/bg_text"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingTop="@dimen/d_10"
+                android:paddingBottom="@dimen/d_10"
+                android:text="@string/thongtin_xuat_bill"
+                android:textAllCaps="true"
+                android:textColor="@color/gray80"
+                android:textSize="@dimen/font_size_15" />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="match_parent"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="@dimen/d_10"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/d_5"
+                android:layout_marginLeft="@dimen/standard_margin_half"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin_half"
+                android:text="@string/red_invoice"
+                android:textColor="@color/O05EA5"
+                android:textSize="@dimen/font_size_15" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIPmNameBussiness"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_15"
+                    android:layout_marginTop="@dimen/d_10"
+                    android:layout_marginRight="@dimen/d_15"
+                    android:textAppearance="@style/EditText.Regular"
+                    android:textColorHint="@color/gray80"
+                    app:boxStrokeColor="@color/mainColor"
+                    app:boxStrokeWidth="0.5dp"
+                    app:hintTextColor="@color/mainColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_bussiness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name_bussiness"
+                        android:inputType="textCapSentences"
+                        android:paddingLeft="@dimen/d_12"
+                        android:paddingTop="@dimen/d_15"
+                        android:paddingRight="@dimen/d_12"
+                        android:paddingBottom="@dimen/d_15"
+                        android:singleLine="true"
+                        android:textAppearance="@style/EditText.SemiBold"
+                        android:textSize="@dimen/font_size_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIPmEmailBussiness"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_15"
+                    android:layout_marginTop="@dimen/d_10"
+                    android:layout_marginRight="@dimen/d_15"
+                    android:textAppearance="@style/EditText.Regular"
+                    android:textColorHint="@color/gray80"
+                    app:boxStrokeColor="@color/mainColor"
+                    app:boxStrokeWidth="0.5dp"
+                    app:hintTextColor="@color/mainColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_bussiness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        android:inputType="textCapSentences"
+                        android:paddingLeft="@dimen/d_12"
+                        android:paddingTop="@dimen/d_15"
+                        android:paddingRight="@dimen/d_12"
+                        android:paddingBottom="@dimen/d_15"
+                        android:singleLine="true"
+                        android:textAppearance="@style/EditText.SemiBold"
+                        android:textSize="@dimen/font_size_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIPTax"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_15"
+                    android:layout_marginTop="@dimen/d_10"
+                    android:layout_marginRight="@dimen/d_15"
+                    android:textAppearance="@style/EditText.Regular"
+                    android:textColorHint="@color/gray80"
+                    app:boxStrokeColor="@color/mainColor"
+                    app:boxStrokeWidth="0.5dp"
+                    app:hintTextColor="@color/mainColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/tax_code"
+                        android:inputType="textCapSentences"
+                        android:paddingLeft="@dimen/d_12"
+                        android:paddingTop="@dimen/d_15"
+                        android:paddingRight="@dimen/d_12"
+                        android:paddingBottom="@dimen/d_15"
+                        android:singleLine="true"
+                        android:textAppearance="@style/EditText.SemiBold"
+                        android:textSize="@dimen/font_size_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIPAddressBui"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_15"
+                    android:layout_marginTop="@dimen/d_10"
+                    android:layout_marginRight="@dimen/d_15"
+                    android:textAppearance="@style/EditText.Regular"
+                    android:textColorHint="@color/gray80"
+                    app:boxStrokeColor="@color/mainColor"
+                    app:boxStrokeWidth="0.5dp"
+                    app:hintTextColor="@color/mainColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/adress_bussiness"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/adress_bussiness"
+                        android:inputType="textCapSentences"
+                        android:paddingLeft="@dimen/d_12"
+                        android:paddingTop="@dimen/d_15"
+                        android:paddingRight="@dimen/d_12"
+                        android:paddingBottom="@dimen/d_15"
+                        android:singleLine="true"
+                        android:textAppearance="@style/EditText.SemiBold"
+                        android:textSize="@dimen/font_size_14" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:background="@color/bg_text"
+                android:paddingLeft="@dimen/d_15"
+                android:paddingTop="@dimen/d_10"
+                android:paddingBottom="@dimen/d_10"
+                android:text="@string/payment_method"
+                android:textAllCaps="true"
+                android:textColor="@color/gray80"
+                android:textSize="@dimen/font_size_15" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/cod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="@dimen/standard_margin"
+                    android:padding="@dimen/standard_margin"
+                    android:text="@string/cod_e_wallet" />
+
+                <RadioButton
+                    android:id="@+id/zalopay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="@dimen/standard_margin"
+                    android:padding="@dimen/standard_margin"
+                    android:text="@string/zalopay_e_wallet" />
+
+                <RadioButton
+                    android:id="@+id/momo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/radio_style"
+                    android:drawablePadding="@dimen/standard_margin"
+                    android:padding="@dimen/standard_margin"
+                    android:text="@string/momo_e_wallet" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/standard_margin"
+                android:background="@color/F0F0F0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/provisional"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/provisional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/voucher_amount"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/voucher_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/subtotal"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/total_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height0_5"
+                android:background="@color/DCDCDC" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:id="@+id/payment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/standard_margin"
+                android:background="@drawable/border_color_005ea5"
+                android:gravity="center"
+                android:padding="@dimen/standard_margin"
+                android:text="@string/btn_thanhtoan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16" />
+
+
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:id="@+id/payment"-->
+            <!--                style="@style/UnelevatedButton"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="@dimen/d_15"-->
+            <!--                android:layout_marginRight="@dimen/d_15"-->
+            <!--                android:layout_marginBottom="@dimen/d_15"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:paddingTop="@dimen/d_13"-->
+            <!--                android:paddingBottom="@dimen/d_13"-->
+            <!--                android:stateListAnimator="@null"-->
+            <!--                android:text="@string/btn_tieptuc"-->
+            <!--                android:textAppearance="@style/TextView.SemiBold"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                android:textSize="@dimen/font_size_16" />-->
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/trans_CC005EA5"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:id="@+id/success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/border_text_color_fff"
+            android:paddingLeft="@dimen/standard_margin_double_30"
+            android:paddingTop="@dimen/standard_margin"
+            android:paddingRight="@dimen/standard_margin_double_30"
+            android:paddingBottom="@dimen/standard_margin"
+            android:text="@string/hoan_thanh"
+            android:textColor="@color/trans_CC005EA5"
+            android:textSize="@dimen/font_size_16" />
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:id="@+id/text_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/success"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/action_bar_height"
+            android:text="@string/payment_success"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_success"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/standard_margin_double"
+            android:src="@drawable/ic_success" />
+    </RelativeLayout>
+</RelativeLayout>

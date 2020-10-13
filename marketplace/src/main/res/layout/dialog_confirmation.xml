@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/view_white_radius"
+    android:minWidth="@dimen/d_300">
+
+    <TextView
+        android:id="@+id/lblTitle"
+        style="@style/TextView.SemiBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/d_16"
+        android:paddingTop="@dimen/d_16"
+        android:paddingEnd="@dimen/d_16"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblMessage"
+        style="@style/TextView.Regular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/d_16"
+        android:paddingTop="@dimen/d_16"
+        android:paddingEnd="@dimen/d_16"
+        android:paddingBottom="@dimen/d_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userIDTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginRight="@dimen/d_15"
+        android:visibility="gone"
+        android:textColorHint="@color/gray80"
+        app:boxStrokeColor="@color/mainColor"
+        app:boxStrokeWidth="0.5dp"
+        app:hintTextColor="@color/mainColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblMessage" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:gravity="start"
+            android:inputType="textCapSentences|textMultiLine"
+            android:paddingLeft="@dimen/d_12"
+            android:minLines="3"
+            android:maxLines="3"
+            android:paddingTop="@dimen/d_15"
+            android:paddingRight="@dimen/d_12"
+            android:paddingBottom="@dimen/d_15"
+            android:textAppearance="@style/EditText.Regular"
+            android:textSize="@dimen/font_size_15"  />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userIDTextInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/d_5"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginRight="@dimen/d_15"
+        android:visibility="gone"
+        android:textColorHint="@color/gray80"
+        app:boxStrokeColor="@color/mainColor"
+        app:boxStrokeWidth="0.5dp"
+        app:hintTextColor="@color/mainColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userIDTextInputLayout" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edNote2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:gravity="start"
+            android:inputType="textCapSentences|textMultiLine"
+            android:paddingLeft="@dimen/d_12"
+            android:minLines="3"
+            android:maxLines="3"
+            android:paddingTop="@dimen/d_15"
+            android:paddingRight="@dimen/d_12"
+            android:paddingBottom="@dimen/d_15"
+            android:textAppearance="@style/EditText.Regular"
+            android:textSize="@dimen/font_size_15"  />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lblCancel"
+        style="@style/UnelevatedButtonCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_10"
+        android:layout_marginStart="@dimen/d_16"
+        android:layout_marginBottom="@dimen/d_20"
+        android:stateListAnimator="@null"
+        android:text="@string/btn_cancel"
+        android:textAppearance="@style/TextView.SemiBold"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/lblOk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userIDTextInputLayout2"  />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lblOk"
+        style="@style/UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_10"
+        android:layout_marginStart="@dimen/d_16"
+        android:layout_marginEnd="@dimen/d_16"
+        android:layout_marginBottom="@dimen/d_20"
+        android:stateListAnimator="@null"
+        android:text="@string/btn_ok"
+        android:textAppearance="@style/TextView.SemiBold"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblCancel"
+        app:layout_constraintTop_toBottomOf="@+id/userIDTextInputLayout2"  />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

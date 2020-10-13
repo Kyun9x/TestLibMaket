@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/d_15"
+    android:paddingTop="@dimen/d_10"
+    android:paddingRight="@dimen/d_15"
+    android:paddingBottom="@dimen/d_10">
+
+
+    <ImageView
+        android:id="@+id/mImage"
+        android:layout_width="@dimen/d_80"
+        android:layout_height="@dimen/d_80"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/mLbTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:singleLine="true"
+        android:textAppearance="@style/TextView.SemiBold"
+        android:textSize="@dimen/font_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mLbContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_5"
+        android:maxLines="2"
+        android:textAppearance="@style/TextView.Regular"
+        android:textColor="@color/grayAA"
+        android:textSize="@dimen/font_size_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mImage"
+        app:layout_constraintTop_toBottomOf="@+id/mLbTitle" />
+
+    <TextView
+        android:id="@+id/mLbPrice"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="@dimen/d_5"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:textAppearance="@style/TextView.Regular"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_12"
+        app:layout_constraintStart_toEndOf="@+id/mImage"
+        app:layout_constraintTop_toBottomOf="@+id/mLbContent" />
+
+    <TextView
+        android:id="@+id/mTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/icon_time"
+        android:drawablePadding="@dimen/d_5"
+        android:gravity="right"
+        android:textAppearance="@style/TextView.Regular"
+        android:textColor="@color/grayAA"
+        android:textSize="@dimen/font_size_11"
+        app:layout_constraintBottom_toBottomOf="@+id/mLbPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mLbPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

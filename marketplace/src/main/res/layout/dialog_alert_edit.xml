@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/d_300"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/standard_margin_15">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:background="@drawable/icon_default"
+        android:layout_width="@dimen/d_40"
+        android:layout_height="@dimen/d_40"
+        android:layout_marginLeft="@dimen/standard_margin_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/d_15"
+        android:layout_marginLeft="@dimen/d_15"
+        android:textColor="@color/text_36"
+        android:textSize="@dimen/font_size_15"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/image" />
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="1dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/d_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/mMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:layout_marginRight="@dimen/d_15"
+        android:src="@drawable/icon_minus"
+        app:layout_constraintBottom_toBottomOf="@+id/mQuantity"
+        app:layout_constraintEnd_toStartOf="@+id/mQuantity"
+        app:layout_constraintTop_toTopOf="@+id/mQuantity" />
+
+    <TextView
+        android:id="@+id/mQuantity"
+        android:layout_width="@dimen/d_35"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/d_20"
+        android:maxLength="3"
+        android:singleLine="true"
+        android:text="1"
+        android:textAppearance="@style/TextView.SemiBold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_16"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <ImageView
+        android:id="@+id/mPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/icon_plus2"
+        app:layout_constraintBottom_toBottomOf="@+id/mQuantity"
+        app:layout_constraintStart_toEndOf="@+id/mQuantity"
+        app:layout_constraintTop_toTopOf="@+id/mQuantity" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mEdit"
+        style="@style/UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginTop="@dimen/d_25"
+        android:layout_marginRight="@dimen/d_15"
+        android:layout_marginBottom="@dimen/d_15"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/d_13"
+        android:paddingBottom="@dimen/d_13"
+        android:stateListAnimator="@null"
+        android:text="@string/cart_edit"
+        android:textAppearance="@style/TextView.SemiBold"
+        android:textSize="@dimen/font_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mQuantity" />
+</androidx.constraintlayout.widget.ConstraintLayout>

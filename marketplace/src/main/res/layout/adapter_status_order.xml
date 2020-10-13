@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:paddingLeft="@dimen/standard_margin_15"
+    android:paddingRight="@dimen/standard_margin_15">
+
+
+    <View
+        android:id="@+id/v1"
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:layout_width="@dimen/standard_margin_2"
+        android:layout_height="@dimen/standard_margin_15"
+        android:background="@color/E1E1E1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/cicle"
+        android:layout_width="@dimen/standard_margin_double"
+        android:layout_height="@dimen/standard_margin_double"
+        android:src="@drawable/ic_uncheck_status"
+        app:layout_constraintEnd_toEndOf="@+id/v1"
+        app:layout_constraintStart_toStartOf="@+id/v1"
+        app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+    <View
+        android:layout_marginLeft="@dimen/standard_margin"
+        android:id="@+id/v2"
+        android:layout_width="@dimen/standard_margin_2"
+        android:layout_height="@dimen/standard_margin_15"
+        android:background="@color/E1E1E1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cicle" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_36"
+        android:textSize="@dimen/font_size_15"
+        android:layout_marginLeft="@dimen/standard_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cicle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

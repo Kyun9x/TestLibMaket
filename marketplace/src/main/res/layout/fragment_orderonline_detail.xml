@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/include_header_order_detail" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/include2"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:id="@+id/status_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/standard_margin"
+                android:text="@string/order_cancel"
+                android:textColor="@color/text_36"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout_invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/F0F0F0"
+                    android:padding="@dimen/standard_margin"
+                    android:text="@string/invoice_information"
+                    android:textColor="@color/color_636363"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:text="@string/name_bussiness"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/font_size_13" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:id="@+id/name_bussiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin_half"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:hint="@string/name_bussiness"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height0_5"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:background="@color/DCDCDC" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:text="@string/email"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/font_size_13" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:id="@+id/email_bussiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin_half"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:hint="@string/email"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height0_5"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:background="@color/DCDCDC" />
+
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:text="@string/tax_code"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/font_size_13" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:id="@+id/tax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin_half"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:hint="@string/tax_code"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height0_5"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:background="@color/DCDCDC" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:text="@string/adress_bussiness"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/font_size_13" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:id="@+id/adress_bussiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin_half"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:hint="@string/adress_bussiness"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+            </LinearLayout>
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:visibility="gone"
+                android:background="@color/F0F0F0"
+                android:padding="@dimen/standard_margin"
+                android:text="@string/receiving_information"
+                android:textColor="@color/color_636363"
+                android:textSize="@dimen/font_size_15" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="@string/nguoi_nhan"
+                android:textColor="@color/color_808080"
+                android:textSize="@dimen/font_size_13" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:id="@+id/info_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin_half"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:hint="@string/name"
+                android:textColor="@color/text_36"
+                android:textSize="@dimen/font_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height0_5"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:visibility="gone"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:background="@color/DCDCDC" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="@string/phone_number"
+                android:textColor="@color/color_808080"
+                android:textSize="@dimen/font_size_13" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:id="@+id/info_phone_number"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin_half"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:textColor="@color/text_36"
+                android:textSize="@dimen/font_size_15"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height0_5"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:visibility="gone"
+                android:background="@color/DCDCDC" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="@string/dia_chi_nhan_hang"
+                android:textColor="@color/color_808080"
+                android:textSize="@dimen/font_size_13" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:id="@+id/adress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin_half"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:hint="@string/adress"
+                android:textColor="@color/text_36"
+                android:textSize="@dimen/font_size_15" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height0_5"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:background="@color/DCDCDC" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:text="@string/customer_note"
+                android:textColor="@color/color_808080"
+                android:textSize="@dimen/font_size_13" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:id="@+id/customer_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/standard_margin_half"
+                android:layout_marginRight="@dimen/standard_margin"
+                android:layout_marginBottom="@dimen/standard_margin"
+                android:textColor="@color/text_36"
+                android:textSize="@dimen/font_size_15" />
+
+            <LinearLayout
+                android:id="@+id/layout_note_inventory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height0_5"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:background="@color/DCDCDC" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:text="@string/estimated_time_of_delivery"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/font_size_13" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:id="@+id/time_estimate_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin_half"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:hint="@string/estimated_time_of_delivery"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height0_5"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:background="@color/DCDCDC" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:text="@string/inventory_note"
+                    android:textColor="@color/color_808080"
+                    android:textSize="@dimen/font_size_13" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:id="@+id/inven_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin_half"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:layout_marginBottom="@dimen/standard_margin"
+                    android:hint="@string/inventory_note"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:background="@color/F0F0F0"
+                android:padding="@dimen/standard_margin"
+                android:text="@string/order_infomation"
+                android:textColor="@color/color_636363"
+                android:textSize="@dimen/font_size_15" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/layout_payment_method"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RadioButton
+                        android:id="@+id/zalopay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/standard_margin"
+                        android:padding="@dimen/standard_margin"
+                        android:text="@string/zalopay_e_wallet" />
+
+                    <RadioButton
+                        android:id="@+id/momo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/standard_margin"
+                        android:padding="@dimen/standard_margin"
+                        android:text="@string/momo_e_wallet" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/standard_margin"
+                android:background="@color/F0F0F0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/payment_method"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/mPaymentmethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_border_count_food"
+                    android:text="ZALOPAY"
+                    android:enabled="false"
+                    android:layout_marginRight="@dimen/d_5"
+                    android:gravity="right"
+                    android:drawablePadding="@dimen/d_15"
+                    android:drawableRight="@drawable/icon_payment_unselect"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/provisional"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/provisional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/voucher_amount"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/voucher_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/subtotal"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/total_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_amount_payment"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/title_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/da_thanh_toan"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/amount_payment_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height0_5"
+                android:background="@color/DCDCDC" />
+
+            <com.lib.marketplace.customview.TextViewOpenSanRegular
+                android:id="@+id/payment"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/standard_margin"
+                android:background="@drawable/border_color_005ea5"
+                android:gravity="center"
+                android:padding="@dimen/standard_margin"
+                android:text="@string/btn_thanhtoan"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_16" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/layout_success"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/trans_CC005EA5">
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:id="@+id/success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/border_text_color_fff"
+            android:paddingLeft="@dimen/standard_margin_double_30"
+            android:paddingTop="@dimen/standard_margin"
+            android:paddingRight="@dimen/standard_margin_double_30"
+            android:paddingBottom="@dimen/standard_margin"
+            android:text="@string/hoan_thanh"
+            android:textColor="@color/trans_CC005EA5"
+            android:textSize="@dimen/font_size_16" />
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:id="@+id/text_success"
+            android:layout_width="wrap_content"
+            android:text="@string/payment_success"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/success"
+            android:textSize="@dimen/font_size_18"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/action_bar_height"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginBottom="@dimen/standard_margin_double"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_success"
+            android:layout_above="@+id/text_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

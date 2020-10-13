@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/include_header2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPTieuDe"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_25"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mTieuDe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mTIPTieuDe">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/gia"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPKhuVuc"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mTIPPrice">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mKhuVuc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_location"
+                    android:drawableRight="@drawable/icon_down_black"
+                    android:drawablePadding="@dimen/d_10"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/khu_vuc2"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPNguoiDang"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mTIPKhuVuc">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mNguoiDang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nguoi_dang"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPSdt"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mTIPNguoiDang">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mSdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPTag"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mTIPSdt">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_tag"
+                    android:drawableRight="@drawable/icon_down_black"
+                    android:drawablePadding="@dimen/d_10"
+                    android:focusableInTouchMode="false"
+                    android:hint="Tag"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPDesc"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_15"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mTIPTag">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/product_description"
+                    android:paddingLeft="@dimen/d_12"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:maxLines="3"
+                    android:gravity="start"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                android:id="@+id/status_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginLeft="@dimen/d_5"
+                android:padding="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/d_10"
+                android:text="@string/product_image"
+                android:textColor="@color/text_36"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mTIPDesc" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecyclerViewImage"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/d_5"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/d_10"
+                android:scrollbars="none"
+                android:layout_marginLeft="@dimen/d_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status_cancel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="@dimen/d_15"
+        android:background="@color/E0E0E0"
+        app:layout_constraintBottom_toTopOf="@+id/viewButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/viewButton"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mCreate"
+            style="@style/UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_15"
+            android:layout_marginBottom="@dimen/d_10"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/d_10"
+            android:paddingBottom="@dimen/d_10"
+            android:stateListAnimator="@null"
+            android:text="@string/dang_tin"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mTaoLaiTin"
+            style="@style/UnelevatedButtonAccept"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_15"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/d_10"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/d_10"
+            android:paddingBottom="@dimen/d_10"
+            android:stateListAnimator="@null"
+            android:text="@string/re_post_articles"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mHuyTin"
+            style="@style/UnelevatedButtonCancel2"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/d_5"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_15"
+            android:layout_marginBottom="@dimen/d_10"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:paddingTop="@dimen/d_10"
+            android:paddingBottom="@dimen/d_10"
+            android:stateListAnimator="@null"
+            android:text="@string/hide_tin"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mCapNhat"
+            style="@style/UnelevatedButtonAccept"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_5"
+            android:layout_marginBottom="@dimen/d_10"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/d_10"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/d_10"
+            android:stateListAnimator="@null"
+            android:text="@string/capnhat"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mAnTin"
+            style="@style/UnelevatedButtonCancel2"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/d_5"
+            android:layout_marginBottom="@dimen/d_10"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/d_10"
+            android:paddingBottom="@dimen/d_10"
+            android:stateListAnimator="@null"
+            android:text="@string/an_tin"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mDaBan"
+            style="@style/UnelevatedButtonAccept"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_5"
+            android:layout_marginBottom="@dimen/d_10"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:paddingTop="@dimen/d_10"
+            android:paddingBottom="@dimen/d_10"
+            android:stateListAnimator="@null"
+            android:text="@string/da_ban"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textSize="@dimen/font_size_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_success"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:background="@color/trans_CC005EA5">
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:id="@+id/success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/border_text_color_fff"
+            android:paddingLeft="@dimen/standard_margin_double_30"
+            android:paddingTop="@dimen/standard_margin"
+            android:paddingRight="@dimen/standard_margin_double_30"
+            android:paddingBottom="@dimen/standard_margin"
+            android:text="@string/hoan_thanh"
+            android:textColor="@color/trans_CC005EA5"
+            android:textSize="@dimen/font_size_16" />
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:id="@+id/text_success"
+            android:layout_width="wrap_content"
+            android:text="@string/payment_success"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/text_success2"
+            android:textSize="@dimen/font_size_18"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/d_15"
+            android:layout_height="wrap_content"/>
+
+        <com.lib.marketplace.customview.TextViewOpenSanRegular
+            android:id="@+id/text_success2"
+            android:layout_width="wrap_content"
+            android:text="@string/create_content_articles"
+            android:layout_marginLeft="@dimen/d_15"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/success"
+            android:textSize="@dimen/font_size_14"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/action_bar_height"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginBottom="@dimen/standard_margin_double"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_success"
+            android:layout_above="@+id/text_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

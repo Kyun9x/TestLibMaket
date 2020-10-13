@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout_header"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/action_bar_height"
+    android:background="@color/white"
+    android:clickable="true"
+    android:minHeight="@dimen/action_bar_height">
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:orientation="horizontal">
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/btn_icon1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_15" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/action_bar_height"
+        android:src="@drawable/ic_x_back"
+        android:padding="@dimen/standard_margin"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="?selectableItemBackground"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_15" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height0_5"
+        android:layout_alignParentBottom="true"
+        android:background="@color/DCDCDC" />
+</RelativeLayout>

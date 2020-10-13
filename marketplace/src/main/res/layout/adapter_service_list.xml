@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mView"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/standard_margin_15">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image"
+        android:background="@drawable/icon_default"
+        android:layout_width="@dimen/d_70"
+        android:layout_height="@dimen/d_70"
+        android:layout_marginLeft="@dimen/standard_margin_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_margin_15"
+        android:textColor="@color/black"
+        android:singleLine="true"
+        android:layout_marginRight="@dimen/d_15"
+        android:textSize="@dimen/font_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanRegular
+        android:id="@+id/adress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_margin_15"
+        android:layout_marginTop="@dimen/standard_margin_half"
+        android:layout_marginRight="@dimen/d_15"
+        android:maxLines="2"
+        android:textColor="@color/color_808080"
+        android:textSize="@dimen/font_size_14"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/down"
+        android:layout_width="@dimen/standard_margin_double_25"
+        android:layout_height="@dimen/standard_margin_double_25"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/icon_sub"
+        android:layout_marginTop="@dimen/standard_margin_half"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/quantity"
+        app:layout_constraintTop_toBottomOf="@+id/adress" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+        android:id="@+id/quantity"
+        android:layout_width="@dimen/standard_margin_double_25"
+        android:layout_height="@dimen/standard_margin_double_25"
+        android:gravity="center"
+        android:text="0"
+        android:visibility="invisible"
+        android:textSize="@dimen/font_size_16"
+        android:textColor="@color/text_36"
+        app:layout_constraintBottom_toBottomOf="@+id/up"
+        app:layout_constraintEnd_toStartOf="@+id/up"
+        app:layout_constraintTop_toTopOf="@+id/up" />
+
+    <ImageView
+        android:id="@+id/up"
+        android:layout_width="@dimen/standard_margin_double_25"
+        android:layout_height="@dimen/standard_margin_double_25"
+        android:layout_marginRight="@dimen/standard_margin_15"
+        android:layout_marginTop="@dimen/standard_margin_half"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/icon_plus"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adress" />
+
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="@dimen/standard_margin_double_25"
+        android:layout_height="@dimen/standard_margin_double_25"
+        android:layout_marginRight="@dimen/standard_margin_15"
+        android:layout_marginTop="@dimen/standard_margin_half"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/icon_plus3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adress" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanRegular
+        android:id="@+id/total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin_half"
+        android:layout_marginRight="@dimen/font_size_12_5"
+        android:gravity="start"
+        android:layout_marginLeft="@dimen/standard_margin_15"
+        android:text="0 đ"
+        android:textColor="@color/text_36"
+        android:textSize="@dimen/font_size_13"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/adress" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanRegular
+        android:id="@+id/price_origin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin_half"
+        android:visibility="gone"
+        android:gravity="start"
+        android:layout_marginLeft="@dimen/d_5"
+        android:textColor="@color/red"
+        android:textSize="@dimen/font_size_13"
+        app:layout_constraintStart_toEndOf="@+id/total_price"
+        app:layout_constraintTop_toBottomOf="@+id/adress" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/standard_margin_15"
+        android:background="@color/DCDCDC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_price" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

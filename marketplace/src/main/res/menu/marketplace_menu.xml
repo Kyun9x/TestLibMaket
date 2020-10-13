@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navi_order"
+        android:icon="@drawable/icon_cart"
+        android:title="@string/order_history" />
+
+    <item
+        android:id="@+id/navi_article"
+        android:icon="@drawable/icon_article"
+        android:title="@string/my_article" />
+
+    <item
+        android:id="@+id/navi_feedback"
+        android:icon="@drawable/icon_feedback"
+        android:title="@string/feedback" />
+</menu>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/standard_margin"
+    android:layout_marginTop="@dimen/standard_margin"
+    android:layout_marginRight="@dimen/standard_margin"
+    android:background="@drawable/border_color_dc"
+    android:padding="@dimen/standard_margin">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_history"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_13"
+        android:layout_marginRight="@dimen/d_10"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanRegular
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_2"
+        android:textColor="@color/gray80"
+        android:layout_marginRight="@dimen/d_10"
+        android:textSize="@dimen/font_size_13"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <com.lib.marketplace.customview.TextViewOpenSanRegular
+        android:id="@+id/adress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_10"
+        android:layout_marginRight="@dimen/d_10"
+        android:textColor="@color/gray80"
+        android:textSize="@dimen/font_size_13"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+
+    <com.lib.marketplace.customview.TextViewOpenSanRegular
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_color_f4970b_trans"
+        android:gravity="center"
+        android:paddingLeft="@dimen/standard_margin"
+        android:paddingTop="@dimen/standard_margin_half"
+        android:paddingRight="@dimen/standard_margin"
+        android:paddingBottom="@dimen/standard_margin_half"
+        android:textColor="@color/F4970B"
+        android:textSize="@dimen/font_size_13"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/adress"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="0 đ"
+        android:textColor="@color/text_36"
+        android:textSize="@dimen/font_size_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

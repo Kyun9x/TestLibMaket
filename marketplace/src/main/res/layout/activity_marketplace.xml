@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_header2" />
+
+    <com.lib.marketplace.util.CenteringTabLayout
+        android:id="@+id/tab_layout"
+        style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:translationZ="@dimen/d_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:tabGravity="center"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/MyCustomTextAppearance"
+        app:tabSelectedTextColor="@color/mainColor"
+        app:tabTextColor="@color/black" />
+
+    <TextView
+        android:id="@+id/mTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginTop="@dimen/d_10"
+        android:drawableLeft="@drawable/icon_address"
+        android:drawablePadding="@dimen/d_5"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/khu_vuc"
+        android:textAppearance="@style/TextView.SemiBold"
+        android:textColor="@color/grayAA"
+        android:textSize="@dimen/font_size_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout" />
+
+    <TextView
+        android:id="@+id/mAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_3"
+        android:drawableRight="@drawable/icon_down_blue"
+        android:drawablePadding="@dimen/d_5"
+        android:gravity="start"
+        android:textAppearance="@style/TextView.Bold"
+        android:textColor="@color/mainColor"
+        android:textSize="@dimen/font_size_13"
+        app:layout_constraintBottom_toBottomOf="@+id/mTitle"
+        app:layout_constraintStart_toEndOf="@+id/mTitle"
+        app:layout_constraintTop_toTopOf="@+id/mTitle" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pagerMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/d_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

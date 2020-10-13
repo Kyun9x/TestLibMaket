@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/swipe"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Bottom View Start-->
+    <LinearLayout
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="right"
+        android:weightSum="1">
+        <!--What you want to show-->
+
+        <ImageView
+            android:id="@+id/mEdit"
+            android:layout_width="wrap_content"
+            android:background="@drawable/icon_address_edit"
+            android:layout_marginTop="@dimen/d_5"
+            android:layout_marginRight="@dimen/d_5"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/mDelete"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/d_15"
+            android:background="@drawable/icon_address_delete"
+            android:layout_marginTop="@dimen/d_5"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Bottom View End-->
+
+    <!-- Surface View Start -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/viewMain"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/mTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/d_10"
+            android:paddingRight="@dimen/d_10"
+            android:paddingTop="@dimen/d_15"
+            android:paddingBottom="@dimen/d_15"
+            android:clickable="false"
+            android:drawablePadding="@dimen/d_10"
+            android:drawableRight="@drawable/icon_more_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/text_36"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height0_5"
+            android:background="@color/DCDCDC"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Surface View End -->
+</com.daimajia.swipe.SwipeLayout>

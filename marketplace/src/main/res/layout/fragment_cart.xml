@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/include_header2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+
+        <LinearLayout
+            android:id="@+id/relativeLayout_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listRecyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height0_5"
+                android:background="@color/DCDCDC" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grayF8"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/standard_margin">
+
+                <EditText
+                    android:id="@+id/input_voucher"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_margin"
+                    android:layout_weight="2"
+                    android:background="@drawable/border_color_dc"
+                    android:drawableLeft="@drawable/ic_coupon"
+                    android:drawablePadding="@dimen/standard_margin"
+                    android:hint="@string/mess_voucher"
+                    android:inputType="textCapCharacters"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColorHint="@color/grayAA"
+                    android:textSize="@dimen/font_size_15"
+                    app:layout_constraintEnd_toStartOf="@+id/check_voucher"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.lib.marketplace.customview.TextViewOpenSanRegular
+                    android:id="@+id/check_voucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/standard_margin"
+                    android:layout_weight="7"
+                    android:alpha="0.4"
+                    android:background="@drawable/border_color_005ea5"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/apply"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_15"
+                    app:layout_constraintBottom_toBottomOf="@+id/input_voucher"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/input_voucher" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/voucher_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/standard_margin"
+                    android:layout_marginTop="@dimen/standard_margin"
+                    android:layout_marginRight="@dimen/standard_margin"
+                    android:textColor="@color/color_2FBC47"
+                    android:textSize="@dimen/font_size_15"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_voucher" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height0_5"
+                android:background="@color/DCDCDC" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/provisional"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/provisional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="@string/voucher_amount"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+
+                <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+                    android:id="@+id/voucher_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingLeft="@dimen/standard_margin"
+                    android:paddingTop="@dimen/standard_margin_half"
+                    android:paddingRight="@dimen/standard_margin"
+                    android:paddingBottom="@dimen/standard_margin_half"
+                    android:text="-0 đ"
+                    android:textColor="@color/text_36"
+                    android:textSize="@dimen/font_size_15" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height0_5"
+        android:layout_marginBottom="@dimen/d_10"
+        android:background="@color/DCDCDC"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/d_5"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginRight="@dimen/d_15"
+        app:layout_constraintBottom_toTopOf="@+id/payment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingTop="@dimen/standard_margin_half"
+            android:paddingRight="@dimen/standard_margin"
+            android:paddingBottom="@dimen/standard_margin_half"
+            android:text="@string/subtotal"
+            android:textColor="@color/text_36"
+            android:textSize="@dimen/font_size_15" />
+
+        <com.lib.marketplace.customview.TextViewOpenSanSemiBold
+            android:id="@+id/total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingLeft="@dimen/standard_margin"
+            android:paddingTop="@dimen/standard_margin_half"
+            android:paddingBottom="@dimen/standard_margin_half"
+            android:textColor="@color/text_36"
+            android:textSize="@dimen/font_size_15" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/payment"
+        style="@style/UnelevatedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/d_15"
+        android:layout_marginRight="@dimen/d_15"
+        android:layout_marginBottom="@dimen/d_15"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/d_13"
+        android:paddingBottom="@dimen/d_13"
+        android:stateListAnimator="@null"
+        android:text="@string/btn_tieptuc"
+        android:textAppearance="@style/TextView.SemiBold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/font_size_16" />
+</androidx.constraintlayout.widget.ConstraintLayout>

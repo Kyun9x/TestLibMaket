@@ -1,5 +1,5 @@
-//include ':MarketPlace'
-//include ':Utill'
-include ':MinhHaiLib'
+include ':MarketPlace'
+include ':zalopay'
+include ':zpdk-sandboxMerchant-release'
 include ':app'
 rootProject.name = "LibUtill"

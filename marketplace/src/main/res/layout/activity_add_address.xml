@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/include_header2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/include2"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPaddress"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/find_address"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPcity"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/icon_down_black"
+                    android:drawablePadding="@dimen/d_10"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/province_city"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPDistrict"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/icon_down_black"
+                    android:drawablePadding="@dimen/d_10"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/district"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mTIPPhuong"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/d_15"
+                android:layout_marginTop="@dimen/d_20"
+                android:layout_marginRight="@dimen/d_15"
+                android:textAppearance="@style/EditText.Regular"
+                android:textColorHint="@color/gray80"
+                app:boxStrokeColor="@color/mainColor"
+                app:boxStrokeWidth="0.5dp"
+                app:hintTextColor="@color/mainColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include3">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mPhuongXa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/icon_down_black"
+                    android:drawablePadding="@dimen/d_10"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/phuongxa"
+                    android:paddingLeft="@dimen/d_12"
+                    android:paddingTop="@dimen/d_15"
+                    android:paddingRight="@dimen/d_12"
+                    android:paddingBottom="@dimen/d_15"
+                    android:singleLine="true"
+                    android:textAppearance="@style/EditText.SemiBold"
+                    android:textSize="@dimen/font_size_14"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/DCDCDC"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mCancel"
+            style="@style/UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_15"
+            android:layout_marginTop="@dimen/d_15"
+            android:layout_marginRight="@dimen/d_5"
+            android:layout_marginBottom="@dimen/d_15"
+            android:layout_weight="1"
+            android:backgroundTint="@color/grayEC"
+            android:paddingTop="@dimen/d_13"
+            android:paddingBottom="@dimen/d_13"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_cancel"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textColor="@color/gray80"
+            android:textSize="@dimen/font_size_16" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mApply"
+            style="@style/UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/d_5"
+            android:layout_marginTop="@dimen/d_15"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_marginBottom="@dimen/d_15"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/d_13"
+            android:paddingBottom="@dimen/d_13"
+            android:stateListAnimator="@null"
+            android:text="@string/save_address"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textSize="@dimen/font_size_16" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

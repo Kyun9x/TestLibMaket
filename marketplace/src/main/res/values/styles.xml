@@ -1,10 +1,168 @@
 <resources>
+
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Animations -->
+    <style name="AnimationOverFlow">
+        <item name="android:windowEnterAnimation">@anim/slide_in_overflow</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_overflow</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_top</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="DialogFullscreen" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@anim/fadein_fast</item>
+        <item name="android:windowExitAnimation">@anim/fadeout_fast</item>
+    </style>
+
+
+    <style name="style_btn_yesno">
+        <item name="android:paddingLeft">@dimen/standard_margin</item>
+        <item name="android:paddingRight">@dimen/standard_margin</item>
+        <item name="android:paddingBottom">@dimen/standard_margin_half</item>
+        <item name="android:paddingTop">@dimen/standard_margin_half</item>
+        <item name="android:gravity">center</item>
+        <item name="android:height">@dimen/action_bar_height_40</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_16_5</item>
+    </style>
+
+    <style name="style_dialog2">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="BottomItemActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/font_size_11</item>
+    </style>
+
+    <style name="BottomItemInActive" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/font_size_11</item>
+    </style>
+
+    <!-- Textview style -->
+    <style name="TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextView.Bold">
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="TextView.SemiBold">
+        <item name="android:fontFamily">@font/semibold</item>
+    </style>
+
+    <style name="TextView.Regular">
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <!-- EditText -->
+    <style name="EditText" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <style name="EditText.Bold">
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="EditText.SemiBold">
+        <item name="android:fontFamily">@font/semibold</item>
+    </style>
+
+    <style name="EditText.Regular">
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="TextHint" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+        <item name="colorControlNormal">#f57c00</item>
+        <item name="colorControlActivated">#c51162</item>
+    </style>
+
+    //style button
+
+    <style name="UnelevatedButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/d_5</item>
+        <item name="background">@color/mainColor</item>
+        <item name="enforceTextAppearance">@style/TextView.SemiBold</item>
+        <item name="backgroundTint">@drawable/view_button_state_custom</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/view_button</item>
+    </style>
+
+    <style name="UnelevatedButtonCancel" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/gray80</item>
+        <item name="cornerRadius">@dimen/d_5</item>
+        <item name="background">@color/grayEC</item>
+        <item name="enforceTextAppearance">@style/TextView.SemiBold</item>
+        <item name="backgroundTint">@color/grayEC</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/view_button_cancel</item>
+    </style>
+
+    <style name="UnelevatedButtonCancel2" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/redE7</item>
+        <item name="cornerRadius">@dimen/d_5</item>
+        <item name="background">@color/pinkFB</item>
+        <item name="enforceTextAppearance">@style/TextView.SemiBold</item>
+        <item name="backgroundTint">@color/pinkFB</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/view_button_cancel</item>
+    </style>
+
+    <style name="UnelevatedButtonAccept" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">@dimen/d_5</item>
+        <item name="background">@color/green3A</item>
+        <item name="enforceTextAppearance">@style/TextView.SemiBold</item>
+        <item name="backgroundTint">@color/green3A</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/view_button_cancel</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:fontFamily">@font/semibold</item>
+    </style>
 </resources>

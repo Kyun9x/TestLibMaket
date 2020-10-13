@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRecyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingBottom="@dimen/d_100"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height1"
+            android:layout_marginBottom="@dimen/d_10"
+            app:layout_constraintBottom_toTopOf="@+id/mCreate" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mCreate"
+            style="@style/UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/d_15"
+            android:layout_marginBottom="@dimen/d_10"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/d_10"
+            android:paddingTop="@dimen/d_15"
+            android:paddingBottom="@dimen/d_15"
+            android:stateListAnimator="@null"
+            android:text="@string/create_article"
+            android:drawableLeft="@drawable/icon_plus4"
+            android:drawablePadding="@dimen/d_5"
+            android:textAppearance="@style/TextView.SemiBold"
+            android:textSize="@dimen/font_size_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,11 +17,6 @@
             </intent-filter>
         </activity>
 
-    <activity android:name="com.lib.example.NewActivity">
-        <intent-filter>
-            <action android:name="com.lib.example.newactivity" />
-        </intent-filter>
-    </activity>
     </application>
 
 </manifest>
