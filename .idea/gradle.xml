@@ -12,7 +12,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/MarketPlace" />
-            <option value="$PROJECT_DIR$/Utill" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/zalopay" />
             <option value="$PROJECT_DIR$/zpdk-sandboxMerchant-release" />
