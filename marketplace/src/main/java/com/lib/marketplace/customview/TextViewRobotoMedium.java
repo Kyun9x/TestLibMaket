@@ -27,7 +27,7 @@ public class TextViewRobotoMedium extends TextView {
 
     private void init() {
 
-        ApplicationIpos app = ApplicationIpos.getInstance();
+        ApplicationIpos app = ApplicationIpos.instance;
 
         setTypeface(app.getFontBussiness().getRobotoRegular());
     }

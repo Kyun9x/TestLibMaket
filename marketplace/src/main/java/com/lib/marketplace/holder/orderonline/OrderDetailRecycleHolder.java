@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.ipos.iposmanage.model.orderonline.DmServiceListOrigin;
+import com.lib.marketplace.model.orderonline.DmServiceListOrigin;
 import com.ipos.saler.extension.StringExt;
 import com.lib.marketplace.R;
 import com.lib.marketplace.holder.AbsRecyleHolder;

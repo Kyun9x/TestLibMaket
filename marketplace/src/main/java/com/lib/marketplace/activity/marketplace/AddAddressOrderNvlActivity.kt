@@ -1,4 +1,4 @@
-package com.ipos.iposmanage.fragment.marketplace
+package com.lib.marketplace.activity.marketplace
 
 import android.Manifest
 import android.content.DialogInterface
@@ -21,7 +21,6 @@ import com.lib.marketplace.R
 import com.lib.marketplace.activity.BaseActivity
 import com.lib.marketplace.activity.order_online.InformationFragment
 import com.lib.marketplace.activity.order_online.MapActivity
-import com.lib.marketplace.app.ApplicationIpos
 import com.lib.marketplace.app.Constants
 import com.lib.marketplace.model.orderonline.DmDeliveryInfo
 import com.lib.marketplace.model.orderonline.DmLocation
@@ -220,7 +219,7 @@ class AddAddressOrderNvlActivity : BaseActivity() {
         var locateModel = LocationModel()
         locateModel.selected = null
         locateModel.location_name = adressdl
-        locateModel.company_id = ApplicationIpos.getInstance().getmGlobalAppbussiness().getmCompanyId()
+        locateModel.company_id = mCartBussiness.companyId
         locateModel.precinct_uid = pricintCode
         locateModel.district_uid = districtCode
         locateModel.city_uid = cityCode

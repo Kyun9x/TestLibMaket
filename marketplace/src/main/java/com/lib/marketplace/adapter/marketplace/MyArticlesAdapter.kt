@@ -3,7 +3,7 @@ package com.lib.marketplace.adapter.marketplace
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.ipos.iposmanage.fragment.marketplace.MyArticlesListFragment
+import com.lib.marketplace.activity.marketplace.MyArticlesListFragment
 import com.lib.marketplace.app.Constants
 
 class MyArticlesAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {

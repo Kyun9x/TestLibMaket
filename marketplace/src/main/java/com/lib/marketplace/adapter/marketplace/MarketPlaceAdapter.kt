@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.lib.marketplace.activity.marketplace.ArticleFragment
 import com.lib.marketplace.activity.marketplace.NvlFragment
-import com.ipos.iposmanage.fragment.order_online.PurchaseFragment
+import com.lib.marketplace.activity.order_online.PurchaseFragment
 
 class MarketPlaceAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 

@@ -1,4 +1,4 @@
-package com.ipos.iposmanage.fragment.marketplace
+package com.lib.marketplace.activity.marketplace
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ipos.iposmanage.adapter.marketplace.MyArticlesListAdapter
+import com.lib.marketplace.adapter.marketplace.MyArticlesListAdapter
 import com.ipos.iposmanage.model.marrketplace.ArticlesModel
 import com.ipos.iposmanage.model.marrketplace.ArticlesModelData
 import com.ipos.saler.extension.gone
@@ -15,7 +15,6 @@ import com.ipos.saler.extension.openActivity
 import com.ipos.saler.extension.visible
 import com.lib.marketplace.R
 import com.lib.marketplace.activity.BaseFragment
-import com.lib.marketplace.activity.marketplace.ArticleCreateActivity
 import com.lib.marketplace.app.Constants
 import com.lib.marketplace.app.Constants.ArticlesStatus.expired
 import com.lib.marketplace.app.Constants.ArticlesStatus.selling
@@ -43,9 +42,9 @@ class MyArticlesListFragment(var putStatus: String) : BaseFragment() {
     private fun api() {
         showProgressHub(mActivity)
         var articlesMode = ArticlesModel()
-        articlesMode.brand_id = mGlobalAppbussiness.getmBrandId()
-        articlesMode.company_id = mGlobalAppbussiness.getmCompanyId()
-        articlesMode.author_id = mGlobalAppbussiness.getmUserName()
+        articlesMode.brand_id = mCartBussiness.brandId
+        articlesMode.company_id = mCartBussiness.companyId
+        articlesMode.author_id = mCartBussiness.userId
         if (Constants.ArticlesStatus.EXPIRED == putStatus) {
             articlesMode.data_type = expired
         } else if (Constants.ArticlesStatus.SOLD == putStatus) {

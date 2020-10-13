@@ -35,19 +35,76 @@
 
     <application
         android:label="@string/app_name"
-        android:name="com.ipos.iposmanage.app.ApplicationIpos"
+        android:name=".app.ApplicationIpos"
         android:allowBackup="true"
-        android:icon="@drawable/logoipos"
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
         android:hardwareAccelerated="true"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="com.lib.marketplace.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".activity.marketplace.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.ArticleDetailActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.ArticleCreateActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.order_online.PurchaseDetailActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.MarketHistoryActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.NvlHistoryDetailActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.NvlDetailActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.MarketPlaceActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.SelectStartAddressActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.order_online.AddAddressOrderOnlineActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.SelectAddressOrderNvlActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.MyArticlesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.CateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.order_online.MapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="layoutDirection|locale"/>
+        <activity android:name=".activity.marketplace.AddAddressOrderNvlActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:configChanges="layoutDirection|locale"/>
+
+        <receiver
+            android:name="vn.zalopay.sdk.MerchantReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="vn.zalopay.sdk.ZP_ACTION" />
+                <category android:name="zlp" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

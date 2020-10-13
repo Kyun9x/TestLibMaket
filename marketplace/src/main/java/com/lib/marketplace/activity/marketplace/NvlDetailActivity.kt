@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ipos.iposmanage.model.orderonline.DmServiceListOrigin
+import com.lib.marketplace.model.orderonline.DmServiceListOrigin
 import com.ipos.saler.extension.StringExt
 import com.lib.marketplace.R
 import com.lib.marketplace.activity.BaseActivity

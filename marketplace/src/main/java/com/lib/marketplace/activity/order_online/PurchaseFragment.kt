@@ -1,4 +1,4 @@
-package com.ipos.iposmanage.fragment.order_online
+package com.lib.marketplace.activity.order_online
 
 import android.app.Activity
 import android.content.Intent
@@ -11,12 +11,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.VolleyError
 import com.google.gson.Gson
 import com.ipos.iposmanage.extension.DialogUtil
-import com.ipos.iposmanage.model.orderonline.DmServiceListOrigin
+import com.lib.marketplace.model.orderonline.DmServiceListOrigin
 import com.ipos.saler.extension.openActivityForResult
 import com.lib.marketplace.R
 import com.lib.marketplace.activity.BaseFragment
 import com.lib.marketplace.activity.CateActivity
-import com.lib.marketplace.activity.order_online.PurchaseDetailActivity
 import com.lib.marketplace.adapter.orderonline.ServiceListRecyleAdapter
 import com.lib.marketplace.app.Constants
 import com.lib.marketplace.holder.orderonline.ServicelistRecycleHolder

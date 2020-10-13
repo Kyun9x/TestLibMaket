@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.ipos.iposmanage.app.ApplicationIpos;
+import com.lib.marketplace.app.ApplicationIpos;
 
 public class TextViewOpenSanSemiBold extends TextView {
 
@@ -26,7 +26,7 @@ public class TextViewOpenSanSemiBold extends TextView {
 
     private void init() {
 
-        ApplicationIpos app = ApplicationIpos.getInstance();
+        ApplicationIpos app = ApplicationIpos.instance;
 
         setTypeface(app.getFontBussiness().getOpenSanSemiBold());
     }

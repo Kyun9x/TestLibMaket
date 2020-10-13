@@ -7,7 +7,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import com.lib.marketplace.activity.order_online.CartFragment;
-import com.ipos.iposmanage.fragment.order_online.PurchaseFragment;
+import com.lib.marketplace.activity.order_online.PurchaseFragment;
 import com.lib.marketplace.R;
 import com.lib.marketplace.activity.order_online.HistoryOrderDetailFragment;
 import com.lib.marketplace.activity.order_online.InformationFragment;

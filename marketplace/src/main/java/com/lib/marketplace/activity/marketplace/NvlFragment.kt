@@ -16,7 +16,7 @@ import com.android.volley.VolleyError
 import com.google.gson.Gson
 import com.ipos.iposmanage.extension.DialogUtil
 import com.lib.marketplace.model.marketplace.NvlModel
-import com.ipos.iposmanage.model.orderonline.DmServiceListOrigin
+import com.lib.marketplace.model.orderonline.DmServiceListOrigin
 import com.ipos.saler.extension.openActivityForResult
 import com.lib.marketplace.R
 import com.lib.marketplace.activity.BaseFragment

@@ -48,7 +48,7 @@ class ArtilesAdapter(
         fun bind(model: ArticlesModel) {
             with(model) {
 
-                Glide.with(ApplicationIpos.getInstance()).load(mImage_urls[0].url_thumb).apply(
+                Glide.with(ApplicationIpos.instance).load(mImage_urls[0].url_thumb).apply(
                     RequestOptions().placeholder(R.drawable.icon_default).override(100, 100)
                 ).into(image)
                 total_price.text = FormatNumberUtil.formatCurrency(mPrice)

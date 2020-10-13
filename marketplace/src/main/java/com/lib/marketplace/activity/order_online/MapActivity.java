@@ -80,7 +80,7 @@ public class MapActivity extends BaseActivity implements OnMapReadyCallback, Goo
         mMyLocation = findViewById(R.id.myLocation);
         btn_xacNhan = findViewById(R.id.btn_xacNhan);
         mBack = findViewById(R.id.back);
-        locationBussiness = ApplicationIpos.getInstance().getLocationBussiness();
+        locationBussiness = ApplicationIpos.instance.getLocationBussiness();
         MapFragment mMapFragment = MapFragment.newInstance();
         FragmentTransaction fragmentTransaction =
                 getFragmentManager().beginTransaction();

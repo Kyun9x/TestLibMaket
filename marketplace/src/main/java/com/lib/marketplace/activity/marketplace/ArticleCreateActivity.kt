@@ -340,9 +340,9 @@ class ArticleCreateActivity : BaseActivity(), BSImagePicker.OnSingleImageSelecte
                 mAuthor_name = mNguoiDang.text.toString(),
                 mAuthor_phone = mSdt.text.toString(),
                 mImage_urls = newImageChoice,
-                author_id = ApplicationIpos.getInstance().getmGlobalAppbussiness().getmUserName(),
-                brand_id = ApplicationIpos.getInstance().getmGlobalAppbussiness().getmBrandId(),
-                company_id = ApplicationIpos.getInstance().getmGlobalAppbussiness().getmCompanyId(),
+                author_id = mCartBussiness.userId,
+                brand_id = mCartBussiness.brandId,
+                company_id = mCartBussiness.companyId,
                 mContent = mDesc.text.toString())
         apiCreate(newArticlesModel)
     }

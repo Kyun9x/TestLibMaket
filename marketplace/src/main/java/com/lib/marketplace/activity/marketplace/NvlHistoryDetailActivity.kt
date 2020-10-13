@@ -68,7 +68,7 @@ class NvlHistoryDetailActivity : BaseActivity() {
 
     private fun api(uId: String) {
         showProgressHub(this)
-        WSRestFull(this).apiSCMInvoicesHistoryDetail(ApplicationIpos.getInstance().getmGlobalAppbussiness().getmCompanyId(), uId, { (data) -> apiDone(data) }) { error: VolleyError ->
+        WSRestFull(this).apiSCMInvoicesHistoryDetail(mCartBussiness.companyId, uId, { (data) -> apiDone(data) }) { error: VolleyError ->
             apiDone(null)
             error.printStackTrace()
             ToastUtil.makeText(this, getString(R.string.error_network2))

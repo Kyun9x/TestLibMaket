@@ -96,7 +96,7 @@ public class AbsRestful {
 
 
     protected <T> void addReq(Request<T> req, String TAG) {
-        ApplicationIpos.getInstance().addToRequestQueue(req, TAG);
+        ApplicationIpos.instance.addToRequestQueue(req, TAG);
     }
 
     public static DefaultRetryPolicy reTryPolicy() {

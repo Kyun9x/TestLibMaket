@@ -5,8 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.VolleyError
-import com.ipos.iposmanage.adapter.marketplace.SelectAddressAdapter
-import com.ipos.iposmanage.fragment.marketplace.AddAddressOrderNvlActivity
+import com.lib.marketplace.adapter.marketplace.SelectAddressAdapter
 import com.ipos.iposmanage.model.marrketplace.LocationModel
 import com.lib.marketplace.R
 import com.lib.marketplace.activity.BaseActivity

@@ -1,4 +1,4 @@
-package com.ipos.iposmanage.adapter.marketplace
+package com.lib.marketplace.adapter.marketplace
 
 import android.content.Context
 import android.view.LayoutInflater

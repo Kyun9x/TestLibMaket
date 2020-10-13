@@ -6,8 +6,7 @@ import android.view.View.OnClickListener;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.ipos.iposmanage.app.R;
-
+import com.lib.marketplace.R;
 
 public class ControlLoadMore {
 

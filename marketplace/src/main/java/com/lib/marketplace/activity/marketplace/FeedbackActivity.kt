@@ -2,10 +2,9 @@ package com.lib.marketplace.activity.marketplace
 
 import android.os.Bundle
 import android.widget.RatingBar
-import android.widget.Toast
 import com.android.volley.Response
 import com.ipos.iposmanage.model.marrketplace.FeedbackModel
-import com.ipos.saler.extension.initIcon
+import com.lib.marketplace.extension.initIcon
 import com.ipos.saler.extension.visible
 import com.lib.marketplace.R
 import com.lib.marketplace.activity.BaseActivity
@@ -32,7 +31,7 @@ class FeedbackActivity : BaseActivity() {
     }
 
     private fun feedback() {
-        var feedbackModel = FeedbackModel(feedback_title = mLb.text.toString(), feedback_content = mNote.text.toString(), customer_name = ApplicationIpos.getInstance().getmGlobalAppbussiness().getmUserName(),customer_phone = "")
+        var feedbackModel = FeedbackModel(feedback_title = mLb.text.toString(), feedback_content = mNote.text.toString(), customer_name = mCartBussiness.userId,customer_phone = "")
         WSRestFull(this).apiSCMFeedback(feedbackModel.toJson(), Response.Listener {
             it?.run{
                 data?.run{

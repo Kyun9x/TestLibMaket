@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.lib.marketplace.holder.orderonline.HeaderServiceListRecycleHolder;
 import com.lib.marketplace.holder.orderonline.ServicelistRecycleHolder;
-import com.ipos.iposmanage.model.orderonline.DmServiceListOrigin;
+import com.lib.marketplace.model.orderonline.DmServiceListOrigin;
 import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersAdapter;
 
 import java.util.ArrayList;

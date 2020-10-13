@@ -27,7 +27,7 @@ public class TextViewOpenSanBold extends TextView {
 
     private void init() {
 
-        ApplicationIpos app = ApplicationIpos.getInstance();
+        ApplicationIpos app = ApplicationIpos.instance;
 
         setTypeface(app.getFontBussiness().getOpenSanBold());
     }

@@ -94,7 +94,7 @@ public class LocationBussiness implements
     }
 
     public static Location getMyLocation() {
-        LocationBussiness mLocationBussiness = ApplicationIpos.getInstance().getLocationBussiness();
+        LocationBussiness mLocationBussiness = ApplicationIpos.instance.getLocationBussiness();
         Location myLocation;
         myLocation = mLocationBussiness.getLocationCurrent();
         return myLocation;

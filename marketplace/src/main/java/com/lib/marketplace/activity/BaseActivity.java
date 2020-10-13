@@ -59,8 +59,8 @@ public class BaseActivity extends AppCompatActivity {
         config = new SharedPref(this);
         mHandler = new Handler();
 
-        mFontBussiness = ApplicationIpos.getInstance().getFontBussiness();
-        mCartBussiness = ApplicationIpos.getInstance().getCartBussiness();
+        mFontBussiness = ApplicationIpos.instance.getFontBussiness();
+        mCartBussiness = ApplicationIpos.instance.getCartBussiness();
     }
 
     protected void finviewHomeBar() {

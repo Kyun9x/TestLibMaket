@@ -1,9 +1,11 @@
 package com.lib.marketplace.model.orderonline;
 
+import android.content.Context;
+
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import com.ipos.iposmanage.app.ApplicationIpos;
-import com.ipos.iposmanage.app.R;
+import com.lib.marketplace.R;
+import com.lib.marketplace.app.ApplicationIpos;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -174,21 +176,21 @@ public class DmOrderOnline implements Serializable {
         this.requestInvoice = requestInvoice;
     }
 
-    public String getStatusName() {
+    public String getStatusName(Context context) {
         if (DmStatusOrder.TYPE_PAYING.equals(status)) {
-            statusName = ApplicationIpos.getInstance().getString(R.string.cho_thanh_toan);
+            statusName = context.getString(R.string.cho_thanh_toan);
         } else if (DmStatusOrder.TYPE_PENDING.equals(status)) {
-            statusName = ApplicationIpos.getInstance().getString(R.string.da_thanh_toan);
+            statusName = context.getString(R.string.da_thanh_toan);
         } else if (DmStatusOrder.TYPE_RECEIVED.equals(status)) {
-            statusName = ApplicationIpos.getInstance().getString(R.string.da_tiep_nhan);
+            statusName = context.getString(R.string.da_tiep_nhan);
         } else if (DmStatusOrder.TYPE_PROCESSED.equals(status)) {
-            statusName = ApplicationIpos.getInstance().getString(R.string.da_xu_ly_Xong);
+            statusName = context.getString(R.string.da_xu_ly_Xong);
         } else if (DmStatusOrder.TYPE_SHIPPING.equals(status)) {
-            statusName = ApplicationIpos.getInstance().getString(R.string.dnag_giao_hang);
+            statusName = context.getString(R.string.dnag_giao_hang);
         } else if (DmStatusOrder.TYPE_COMPLETED.equals(status)) {
-            statusName = ApplicationIpos.getInstance().getString(R.string.hoan_thanh);
+            statusName = context.getString(R.string.hoan_thanh);
         } else if (DmStatusOrder.TYPE_CANCELED.equals(status)) {
-            statusName = ApplicationIpos.getInstance().getString(R.string.bi_huy);
+            statusName = context.getString(R.string.bi_huy);
         }
         return statusName;
     }

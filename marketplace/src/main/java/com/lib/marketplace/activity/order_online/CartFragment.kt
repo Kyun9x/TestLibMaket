@@ -69,13 +69,10 @@ class CartFragment : BaseFragment() {
 
     private fun showDialogCheckPromotion() {
         val dialogYesNo: DialogYesNo = object : DialogYesNo(mActivity) {
-            override fun getHeader(): String {
-                return getString(R.string.thongbao)
-            }
-
-            override fun getMessage(): String {
-                return getString(R.string.mess_apply_voucher)
-            }
+            override val header: String?
+                get() = getString(R.string.thongbao)
+            override val message: String?
+                get() = getString(R.string.mess_apply_voucher)
 
             override fun setActionYes() {
                 addVoucher()

@@ -17,7 +17,7 @@ import com.lib.marketplace.app.ApplicationIpos
 object LocationExt {
     fun gpsIsEnable(): Boolean {
         val lm =
-                ApplicationIpos.getInstance().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+                ApplicationIpos.instance.getSystemService(Context.LOCATION_SERVICE) as LocationManager
         var gpsEnabled = false
         var networkEnabled = false
 

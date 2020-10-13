@@ -3,22 +3,24 @@ package com.lib.marketplace.bussiness
 import com.google.gson.Gson
 import com.lib.marketplace.model.marketplace.NvlModel
 import com.lib.marketplace.model.marketplace.NvlOnlineModel
-import com.ipos.iposmanage.model.orderonline.*
 import com.ipos.saler.extension.StringExt
-import com.lib.marketplace.app.ApplicationIpos
 import com.lib.marketplace.model.marketplace.CartLocateModel
-import com.lib.marketplace.model.orderonline.DmBrand
-import com.lib.marketplace.model.orderonline.DmDeliveryInfo
-import com.lib.marketplace.model.orderonline.DmOrderOnline
-import com.lib.marketplace.model.orderonline.DmService
+import com.lib.marketplace.model.orderonline.*
 import com.lib.marketplace.util.ConverUtil
 import com.lib.marketplace.util.Log
 
 class CartBussiness {
     private var mOrderModel = DmOrderOnline()
     private var dmCartLocate = CartLocateModel()
-    var mAppType = "POSPC"
     var mListBrands = ArrayList<DmBrand>()
+
+    //Adding Data
+    var appType = ""
+    var companyId = ""
+    var brandId = ""
+    var userId = ""
+    var listBrand = ArrayList<DmBrand>()
+    var listStore = ArrayList<DmStore>()
 
     fun addBrand(data: ArrayList<DmBrand>){
         mListBrands.clear()
@@ -77,11 +79,11 @@ class CartBussiness {
         }
         nvlOnline.final_amount = mOrderModel.amount
         nvlOnline.is_red_invoice = mOrderModel.requestInvoice
-        nvlOnline.customer_id = ApplicationIpos.getInstance().getmGlobalAppbussiness().getmUserName()
-        nvlOnline.customer_name = ApplicationIpos.getInstance().getmGlobalAppbussiness().getmUserName()
+        nvlOnline.customer_id = userId
+        nvlOnline.customer_name = userId
         nvlOnline.recipient_name = mOrderModel.contactName
         nvlOnline.recipient_id = mOrderModel.dmDeliveryInfo?.receiverPhone
-        nvlOnline.company_id = ApplicationIpos.getInstance().getmGlobalAppbussiness().getmCompanyId()
+        nvlOnline.company_id = companyId
 
         mOrderModel.companyTaxCode?.run {
             nvlOnline.tax_code = this

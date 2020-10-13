@@ -255,8 +255,8 @@ public class InformationFragment extends BaseFragment {
 
     protected void loadStore(String brandId) {
         mStores.clear();
-        if (ApplicationIpos.getInstance().getListStore() != null && ApplicationIpos.getInstance().getListStore().size() > 0) {
-            for (DmStore dmStore : ApplicationIpos.getInstance().getListStore()) {
+        if (mCartBussiness.getListStore() != null && mCartBussiness.getListStore().size() > 0) {
+            for (DmStore dmStore : mCartBussiness.getListStore()) {
                 if (dmStore.getBrandId().equals(brandId)) {
                     mStores.add(dmStore);
                 }
@@ -300,7 +300,7 @@ public class InformationFragment extends BaseFragment {
             return;
         }
 
-        if (TextUtils.isEmpty(storeName) && mCartBussiness.getMAppType() == FABI) {
+        if (TextUtils.isEmpty(storeName) && mCartBussiness.getAppType() == FABI) {
             ToastUtil.makeText(mActivity, getString(R.string.store) + " " + getString(R.string.not_empty));
             return;
         }
@@ -355,7 +355,7 @@ public class InformationFragment extends BaseFragment {
         mCartBussiness.getOrder().getDmDeliveryInfo().setReceiverName(namedl);
         mCartBussiness.getOrder().getDmDeliveryInfo().setReceiverPhone(phonedl);
 
-        mCartBussiness.getOrder().setCompanyId(mGlobalAppbussiness.getmCompanyId());
+        mCartBussiness.getOrder().setCompanyId(mCartBussiness.getCompanyId());
         mCartBussiness.getOrder().setContactCompany(nameB);
         mCartBussiness.getOrder().setContactName(namedl);
         mCartBussiness.getOrder().setCustomerName(nameB);

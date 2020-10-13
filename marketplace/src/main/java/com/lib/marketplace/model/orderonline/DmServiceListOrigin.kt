@@ -1,4 +1,4 @@
-package com.ipos.iposmanage.model.orderonline
+package com.lib.marketplace.model.orderonline
 
 import com.google.gson.annotations.SerializedName
 import com.lib.marketplace.model.marketplace.NvlImageModel

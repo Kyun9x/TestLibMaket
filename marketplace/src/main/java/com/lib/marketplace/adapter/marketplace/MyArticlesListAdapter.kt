@@ -1,4 +1,4 @@
-package com.ipos.iposmanage.adapter.marketplace
+package com.lib.marketplace.adapter.marketplace
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,14 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ipos.iposmanage.model.marrketplace.ArticlesModel
-import com.ipos.iposmanage.model.marrketplace.InboxModel
-import com.ipos.iposmanage.util.DateTimeUtil.Companion.convertStringToTimeStamp
 import com.ipos.iposmanage.util.DateTimeUtil.Companion.convertTimeStampToDate
 import com.ipos.saler.extension.*
-import com.ipos.saler.extension.initIconNoDefault
 import com.lib.marketplace.R
 import com.lib.marketplace.adapter.BaseRecycleAdapter
 import com.lib.marketplace.app.Constants
+import com.lib.marketplace.extension.initAvatarCompany
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.holder_my_articles.*
 

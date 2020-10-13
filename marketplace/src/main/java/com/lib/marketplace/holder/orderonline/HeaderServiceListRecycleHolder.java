@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-import com.ipos.iposmanage.model.orderonline.DmServiceListOrigin;
+import com.lib.marketplace.model.orderonline.DmServiceListOrigin;
 import com.lib.marketplace.R;
 import com.lib.marketplace.holder.AbsRecyleHolder;
 

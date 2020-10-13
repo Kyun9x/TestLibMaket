@@ -78,7 +78,7 @@ object StringExt {
 
     fun isCompareEmail(text: String, message: String): Boolean {
         if (!emailValid(text.trim())) {
-            Toast.makeText(ApplicationIpos.getInstance(), message, Toast.LENGTH_SHORT).show()
+            Toast.makeText(ApplicationIpos.instance, message, Toast.LENGTH_SHORT).show()
             return true
         }
         return false

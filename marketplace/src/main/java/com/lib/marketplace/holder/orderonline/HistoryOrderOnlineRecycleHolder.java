@@ -68,7 +68,7 @@ public class HistoryOrderOnlineRecycleHolder extends AbsRecyleHolder {
             mAdress.setText(nguoinhan);
         }
         mPrice.setText(FormatNumberUtil.formatCurrency(dmOrderOnline.getAmount()));
-        mStatus.setText(dmOrderOnline.getStatusName());
+        mStatus.setText(dmOrderOnline.getStatusName(mContext));
         mTime.setText(DateTimeUtil.convertTimeStampToDate(
                 DateTimeUtil.convertStringToTimeStamp(
                         item.getCreatedTime(),

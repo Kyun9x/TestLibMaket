@@ -1,7 +1,7 @@
 package com.lib.marketplace.paser.orderonline;
 
 import com.google.gson.annotations.SerializedName;
-import com.ipos.iposmanage.model.orderonline.DmServiceListOrigin;
+import com.lib.marketplace.model.orderonline.DmServiceListOrigin;
 
 import java.io.Serializable;
 import java.util.ArrayList;

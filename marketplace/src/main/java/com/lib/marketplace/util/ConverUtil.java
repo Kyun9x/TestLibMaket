@@ -1,6 +1,6 @@
 package com.lib.marketplace.util;
 
-import com.ipos.iposmanage.model.orderonline.DmServiceListOrigin;
+import com.lib.marketplace.model.orderonline.DmServiceListOrigin;
 import com.lib.marketplace.model.orderonline.DmService;
 
 import java.util.ArrayList;

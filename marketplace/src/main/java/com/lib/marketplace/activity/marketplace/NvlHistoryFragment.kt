@@ -56,7 +56,7 @@ class NvlHistoryFragment : BaseFragment() {
     private fun orderOnline() {
         refresh_layout.isRefreshing = false
         showProgressHub(mActivity)
-        WSRestFull(context).apiSCMInvoicesHistory(mGlobalAppbussiness.getmCompanyId(), { (data) -> onResponseOrderOnline(data) }) { error ->
+        WSRestFull(context).apiSCMInvoicesHistory(mCartBussiness.companyId, { (data) -> onResponseOrderOnline(data) }) { error ->
             onResponseOrderOnline(null)
             error.printStackTrace()
             ToastUtil.makeText(mActivity, getString(R.string.error_network2))
