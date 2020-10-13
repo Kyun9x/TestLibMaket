@@ -12,6 +12,7 @@ import com.android.volley.toolbox.Volley;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.google.firebase.FirebaseApp;
+import com.lib.marketplace.BuildConfig;
 import com.lib.marketplace.bussiness.CartBussiness;
 import com.lib.marketplace.bussiness.FontBussiness;
 import com.lib.marketplace.bussiness.LocationBussiness;
@@ -74,7 +75,7 @@ public class ApplicationIpos extends Application {
         ZaloPaySDK.getInstance().initWithAppId(684);
 
 
-        if (com.lib.minhhailib.BuildConfig.DEBUG) {
+        if (BuildConfig.DEBUG) {
             Stetho.initializeWithDefaults(this);
 //            AppMoMoLib.getInstance().setEnvironment(AppMoMoLib.ENVIRONMENT.DEVELOPMENT);
             AppMoMoLib.getInstance().setEnvironment(AppMoMoLib.ENVIRONMENT.PRODUCTION);
