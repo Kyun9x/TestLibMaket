@@ -2,4 +2,4 @@ include ':MarketPlace'
 include ':zalopay'
 include ':zpdk-sandboxMerchant-release'
 include ':app'
-rootProject.name = "LibUtill"
+rootProject.name = "MHLib-MarketPlace"
