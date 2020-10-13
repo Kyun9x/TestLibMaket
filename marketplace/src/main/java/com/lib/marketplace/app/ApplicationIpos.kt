@@ -36,7 +36,6 @@ import kotlin.collections.ArrayList
 class ApplicationIpos : Application() {
     private var mRequestQueue: RequestQueue? = null
     var fontBussiness: FontBussiness? = null
-        private set
     var locationBussiness: LocationBussiness? = null
     var cartBussiness: CartBussiness? = null
 
@@ -51,6 +50,7 @@ class ApplicationIpos : Application() {
     }
 
     fun loadData(companyId: String? = null,brandId: String? = null,userId: String? = null,appType: String? = null,listBrand: ArrayList<DmBrand>? = null,listStore: ArrayList<DmStore>? = null){
+        cartBussiness = CartBussiness()
         companyId?.run{
             cartBussiness?.companyId = this
         }
@@ -73,7 +73,7 @@ class ApplicationIpos : Application() {
         }
     }
 
-    private fun initBussiness() {
+     fun initBussiness() {
         fontBussiness = FontBussiness(this)
         locationBussiness = LocationBussiness(this)
         cartBussiness = CartBussiness()
