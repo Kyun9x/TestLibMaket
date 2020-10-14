@@ -30,8 +30,6 @@ import okhttp3.OkHttpClient
 import okhttp3.TlsVersion
 import vn.momo.momo_partner.AppMoMoLib
 import vn.zalopay.sdk.ZaloPaySDK
-import java.util.*
-import kotlin.collections.ArrayList
 
 class ApplicationIpos : Application() {
     private var mRequestQueue: RequestQueue? = null
@@ -49,33 +47,39 @@ class ApplicationIpos : Application() {
         Log.i("APP", "ON APP Width/height ")
     }
 
-    fun loadData(companyId: String? = null,brandId: String? = null,userId: String? = null,appType: String? = null,listBrand: ArrayList<DmBrand>? = null,listStore: ArrayList<DmStore>? = null){
-        cartBussiness = CartBussiness()
-        companyId?.run{
+    fun loadData(
+        companyId: String? = null,
+        brandId: String? = null,
+        userId: String? = null,
+        appType: String? = null,
+        listBrand: ArrayList<DmBrand>? = null,
+        listStore: ArrayList<DmStore>? = null
+    ) {
+        companyId?.run {
             cartBussiness?.companyId = this
         }
-        brandId?.run{
+        brandId?.run {
             cartBussiness?.brandId = this
         }
-        userId?.run{
+        userId?.run {
             cartBussiness?.userId = this
         }
-        appType?.run{
+        appType?.run {
             cartBussiness?.appType = this
         }
-        listBrand?.run{
+        listBrand?.run {
             cartBussiness?.listBrand = ArrayList()
             cartBussiness?.listBrand?.addAll(this)
         }
-        listStore?.run{
+        listStore?.run {
             cartBussiness?.listStore = ArrayList()
             cartBussiness?.listStore?.addAll(this)
         }
     }
 
-     fun initBussiness() {
-        fontBussiness = FontBussiness(this)
-        locationBussiness = LocationBussiness(this)
+    fun initBussiness() {
+//        fontBussiness = FontBussiness(this)
+//        locationBussiness = LocationBussiness(this)
         cartBussiness = CartBussiness()
         FormatNumberUtil.initInStance()
         Countly.applicationOnCreate()
@@ -111,8 +115,6 @@ class ApplicationIpos : Application() {
     // created when it is accessed for the first time
     val requestQueue: RequestQueue?
         get() {
-            // lazy initialize the request queue, the queue instance will be
-            // created when it is accessed for the first time
             if (mRequestQueue == null) {
                 //mRequestQueue = Volley.newRequestQueue(getApplicationContext());
                 val builderOk = OkHttpClient.Builder()

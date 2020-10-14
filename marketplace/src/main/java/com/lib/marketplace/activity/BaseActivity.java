@@ -34,7 +34,6 @@ public class BaseActivity extends AppCompatActivity {
     protected SharedPref config;
     protected Handler mHandler;
 
-    protected FontBussiness mFontBussiness;
 
     protected TextView mTitle;
     protected ImageView mIconMenu;
@@ -59,7 +58,6 @@ public class BaseActivity extends AppCompatActivity {
         config = new SharedPref(this);
         mHandler = new Handler();
 
-        mFontBussiness = ApplicationIpos.instance.getFontBussiness();
         mCartBussiness = ApplicationIpos.instance.getCartBussiness();
     }
 

@@ -70,46 +70,6 @@
         app:smsp_selectedItemListColor="#FF5252"
         app:smsp_underlineColor="@color/white37" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mTIL"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/d_15"
-        android:layout_marginTop="@dimen/d_30"
-        android:layout_marginRight="@dimen/d_15"
-        android:background="@drawable/editext_border"
-        android:textAppearance="@style/EditText.Regular"
-        android:textColorHint="@color/white9B"
-        android:visibility="gone"
-        app:boxStrokeColor="@color/mainColor"
-        app:boxStrokeWidth="0.5dp"
-        app:hintTextColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mTitle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/mSelectAddress1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/trans100"
-            android:drawableRight="@drawable/icon_down"
-            android:drawablePadding="@dimen/d_10"
-            android:focusableInTouchMode="false"
-            android:hint="@string/order_address_lb2"
-            android:inputType="textCapWords"
-            android:paddingLeft="@dimen/d_12"
-            android:paddingTop="@dimen/d_15"
-            android:paddingRight="@dimen/d_12"
-            android:paddingBottom="@dimen/d_15"
-            android:singleLine="true"
-            android:textAppearance="@style/EditText.SemiBold"
-            android:textColor="@color/white"
-            android:textSize="@dimen/font_size_16" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/mStart"
         style="@style/UnelevatedButton"
