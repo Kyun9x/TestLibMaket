@@ -2,7 +2,9 @@ package com.lib.marketplace.activity.order_online
 
 import android.app.Activity
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lib.marketplace.model.orderonline.DmServiceListOrigin
 import com.ipos.saler.extension.StringExt
@@ -40,7 +42,7 @@ class PurchaseDetailActivity : BaseActivity() {
         }?.copy()
 
         dmServiceListOrigin?.run {
-            initAvatarCompany(mImg, image, getDrawable(R.drawable.icon_default))
+            initAvatarCompany(mImg, image, baseContext.getDrawable(R.drawable.icon_default))
             if(quantity == 0.0){
                 mQuantity.text = "1"
                 dmServiceListOrigin?.quantity = 1.0

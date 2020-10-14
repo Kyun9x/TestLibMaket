@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.lib.marketplace.app.ApplicationIpos;
 
 
-public class TextViewOpenSanRegular extends TextView {
+public class TextViewOpenSanRegular extends androidx.appcompat.widget.AppCompatTextView {
 
 
     public TextViewOpenSanRegular(Context context, AttributeSet attrs) {

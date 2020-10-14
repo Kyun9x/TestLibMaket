@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.lib.marketplace.app.ApplicationIpos;
 
-public class TextViewOpenSanLight extends TextView {
+public class TextViewOpenSanLight extends androidx.appcompat.widget.AppCompatTextView {
 
 
     public TextViewOpenSanLight(Context context, AttributeSet attrs) {

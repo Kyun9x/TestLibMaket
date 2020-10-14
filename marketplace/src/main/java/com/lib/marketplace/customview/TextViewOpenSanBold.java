@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.lib.marketplace.app.ApplicationIpos;
 
 
-public class TextViewOpenSanBold extends TextView {
+public class TextViewOpenSanBold extends androidx.appcompat.widget.AppCompatTextView {
 
 
     public TextViewOpenSanBold(Context context, AttributeSet attrs) {

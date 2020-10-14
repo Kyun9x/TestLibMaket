@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.lib.marketplace.app.ApplicationIpos;
 
-public class TextViewRobotoLight extends TextView {
+public class TextViewRobotoLight extends androidx.appcompat.widget.AppCompatTextView {
 
 
     public TextViewRobotoLight(Context context, AttributeSet attrs) {

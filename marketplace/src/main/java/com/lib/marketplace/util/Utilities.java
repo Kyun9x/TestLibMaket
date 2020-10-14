@@ -484,39 +484,39 @@ public class Utilities {
         return percentage.intValue();
     }
 
-    public static String getIMEI(Context context) {
-        try {
-            SharedPref pref = new SharedPref(context);
-            String tmDevice = pref.getString(Constants.GETIMEI, "");
-            if (!tmDevice.equals("")) {
-                return tmDevice;
-            }
-            TelephonyManager tm = (TelephonyManager) context
-                    .getSystemService(Context.TELEPHONY_SERVICE);
-
-            tmDevice = "" + tm.getDeviceId();
-            if (tmDevice == null || tmDevice.equals("000000000000000")) {
-                WifiManager wifiMan = (WifiManager) context
-                        .getSystemService(Context.WIFI_SERVICE);
-                WifiInfo wifiInf = wifiMan.getConnectionInfo();
-                String macAddr = wifiInf.getMacAddress();
-                Log.i("Utilities.getIMEI()", "gianglv3---->MAC " + macAddr);
-                return macAddr;
-            }
-
-            Log.i("Utilities.getIMEI()", "gianglv3---->Imei " + tmDevice);
-            pref.putString(Constants.GETIMEI, tmDevice);
-            return tmDevice;
-        } catch (Exception e) {
-            e.printStackTrace();
-            String androidId = ""
-                    + Settings.Secure.getString(
-                    context.getContentResolver(),
-                    Settings.Secure.ANDROID_ID);
-            Log.i("Utilities.getIMEI()", "gianglv3----> " + androidId);
-            return androidId;
-        }
-    }
+//    public static String getIMEI(Context context) {
+//        try {
+//            SharedPref pref = new SharedPref(context);
+//            String tmDevice = pref.getString(Constants.GETIMEI, "");
+//            if (!tmDevice.equals("")) {
+//                return tmDevice;
+//            }
+//            TelephonyManager tm = (TelephonyManager) context
+//                    .getSystemService(Context.TELEPHONY_SERVICE);
+//
+//            tmDevice = "" + tm.getDeviceId();
+//            if (tmDevice == null || tmDevice.equals("000000000000000")) {
+//                WifiManager wifiMan = (WifiManager) context
+//                        .getSystemService(Context.WIFI_SERVICE);
+//                WifiInfo wifiInf = wifiMan.getConnectionInfo();
+//                String macAddr = wifiInf.getMacAddress();
+//                Log.i("Utilities.getIMEI()", "gianglv3---->MAC " + macAddr);
+//                return macAddr;
+//            }
+//
+//            Log.i("Utilities.getIMEI()", "gianglv3---->Imei " + tmDevice);
+//            pref.putString(Constants.GETIMEI, tmDevice);
+//            return tmDevice;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            String androidId = ""
+//                    + Settings.Secure.getString(
+//                    context.getContentResolver(),
+//                    Settings.Secure.ANDROID_ID);
+//            Log.i("Utilities.getIMEI()", "gianglv3----> " + androidId);
+//            return androidId;
+//        }
+//    }
 
     public static String getMac(Context context) {// ANDROID MAC WIFI
         String base = "com.viettel.tinngan";

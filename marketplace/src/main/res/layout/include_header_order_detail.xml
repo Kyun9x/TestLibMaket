@@ -19,7 +19,6 @@
             android:layout_height="match_parent"
             android:singleLine="true"
             android:gravity="center"
-            android:layout_toRightOf="@+id/btn_icon1"
             android:textColor="@color/black"
             android:textSize="@dimen/font_size_15" />
 

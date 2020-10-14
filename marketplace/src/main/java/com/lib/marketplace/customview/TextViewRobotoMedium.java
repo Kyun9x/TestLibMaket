@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.lib.marketplace.app.ApplicationIpos;
 
 
-public class TextViewRobotoMedium extends TextView {
+public class TextViewRobotoMedium extends androidx.appcompat.widget.AppCompatTextView {
 
 
     public TextViewRobotoMedium(Context context, AttributeSet attrs) {

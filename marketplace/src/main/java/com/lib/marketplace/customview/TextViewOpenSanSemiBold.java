@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.lib.marketplace.app.ApplicationIpos;
 
-public class TextViewOpenSanSemiBold extends TextView {
+public class TextViewOpenSanSemiBold extends androidx.appcompat.widget.AppCompatTextView {
 
 
     public TextViewOpenSanSemiBold(Context context, AttributeSet attrs) {
